@@ -1,0 +1,14 @@
+- content_for :stylesheets do
+  = stylesheet_link_tag "corporate"
+
+- content_for :javascripts do
+  = javascript_include_tag "corporate"
+
+= wrap_layout :layout do
+  %meta{itemprop: 'name',        content: 'Hotel Sveti Nikola'                                                        }
+  %meta{itemprop: 'description', content: (yield_content(:description) || current_page.data.description)    }
+  %meta{itemprop: 'url',         content: 'http://hotel-sveti-nikola.com'                                   }
+  %meta{itemprop: 'inLanguage',  content: I18n.locale                                                       }
+  %meta{itemprop: 'image',       content: "http://hotel-sveti-nikola.com#{image_path('logo.png')}"          }
+
+  = yield

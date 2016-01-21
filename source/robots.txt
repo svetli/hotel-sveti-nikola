@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://hotel-sveti-nikola.com/sitemap.xml

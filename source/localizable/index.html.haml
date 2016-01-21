@@ -1,0 +1,16 @@
+---
+title: Hotel Sveti Nikola
+priority: 1.0
+layout: corporate
+---
+
+- content_for :description do
+  = I18n.t("corporate.common.page-description")
+
+= partial "header"
+
+%main{role: "main"}
+  = partial "intro"
+  = partial "about"
+
+= partial "footer"
