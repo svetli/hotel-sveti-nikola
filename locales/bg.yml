@@ -1,6 +1,19 @@
 bg:
     corporate:
+        logo:
+            title: Хотел Свети Никола
+        header:
+            main-title: Хотел Свети Никола
+            subtitle: В подножието на Осоговска планина
+            navigation:
+                about: За Нас
+                hotel: Хотел
+                restaurant: Ресторант
+                contacts: Контакти
         common:
             page-description: Хотел Свети Никола Кюстендил
         footer:
             copyright: Всички права запазени
+        about:
+            title: За Нас
+            content: тук е за нас секцията

@@ -1,67 +1,43 @@
-@charset "utf-8";
 @import "normalize";
+@import "bourbon";
+@import "font-awesome";
 
-body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-}
+$c-yellow:  #FAFCB9;
+$c-brown:   #984F00;
+$c-light:   #FDFDED;
+$c-blue:    #A6B6BC;
+$c-red:     #E2545B;
+$c-grey:    #EFEFF0;
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
-}
+$c-text:    $c-brown;
 
-h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0;
-}
+$f-stack-sans: 'Open Sans', Verdana, Arial, sans-serif;
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+$max-container-width: 1600px;
 
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
-    }
-  }
-}
+// Primary break points
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
+$bp-xsmall: 479px;
+$bp-small:  599px;
+$bp-medium: 770px;
+$bp-large:  979px;
+$bp-xlarge: 1199px;
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
+@import "mixin/typography";
+@import "mixin/breakpoint";
+
+// ----------------------------------------------
+// Layout
+
+@import "layout/global";
+@import "layout/header";
+@import "layout/footer";
+
+// ----------------------------------------------
+// Modules
+
+@import "module/intro";
+@import "module/about";
+@import "module/hotel";
+@import "module/restaurant";
+@import "module/contacts";

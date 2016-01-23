@@ -1,0 +1,21 @@
+%header#header{role: "banner"}
+  .container
+    %h1.logo
+      %a.scroll-to{href: "#intro"}
+        = partial "svg-logo", locals: {width: 120, height: 125}
+
+    %nav.navigation{role: "navigation"}
+      %ul
+        %li
+          %a.scroll-to{href: "#about"}= I18n.t("corporate.header.navigation.about")
+        %li
+          %a.scroll-to{href: "#hotel"}= I18n.t("corporate.header.navigation.hotel")
+        %li
+          %a.scroll-to{href: "#restaurant"}= I18n.t("corporate.header.navigation.restaurant")
+        %li
+          %a.scroll-to{href: "#contacts"}= I18n.t("corporate.header.navigation.contacts")
+
+    %ul.languages
+      - [:bg, :en, :ru].each do |lang|
+        %li
+          %a{class: ('active' if lang == I18n.locale), href: I18n.locale == lang ? nil : "/#{lang unless lang == :bg}"}= lang

@@ -1,0 +1,33 @@
+// ----------------------------------------------
+// Header
+
+[role=banner] {
+    height: 125px;
+    z-index: 10;
+    @include position(fixed, 0 0 null 0);
+
+    .container {
+        padding-top: 10px;
+
+        .logo {
+            float: left;
+            position: relative;
+            @include transform-origin(0);
+        }
+
+        [role=navigation] {
+            float: left;
+            background-color: $c-yellow;
+            li {
+                display: inline-block;
+            }
+        }
+
+        .languages {
+            float: right;
+            li {
+                float: left;
+            }
+        }
+    }
+}

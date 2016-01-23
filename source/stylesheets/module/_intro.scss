@@ -1,0 +1,38 @@
+// ----------------------------------------------
+// Intro
+
+#intro {
+    overflow: hidden;
+    position: relative;
+
+    > div {
+        @include position(absolute, 0);
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 44%;
+        }
+    }
+
+    .parallax-bg {
+        background-image: url(../images/hotel.jpg);
+        background-size: cover;
+        background-position: center;
+        @include position(absolute, 0);
+
+        .container {
+            overflow: hidden;
+            text-align: center;
+            @include display(flex);
+            @include align-items(center);
+            @include flex-direction(column);
+            @include justify-content(center);
+
+            h2 {
+                position: relative;
+                font-size: 60px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
