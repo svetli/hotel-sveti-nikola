@@ -1,6 +1,5 @@
 @import "normalize";
 @import "bourbon";
-@import "font-awesome";
 
 $c-yellow:  #FAFCB9;
 $c-brown:   #984F00;
@@ -12,6 +11,7 @@ $c-grey:    #EFEFF0;
 $c-text:    $c-brown;
 
 $f-stack-sans: 'Open Sans', Verdana, Arial, sans-serif;
+$f-stack-icon: 'icon-font';
 
 $max-container-width: 1600px;
 
@@ -41,3 +41,8 @@ $bp-xlarge: 1199px;
 @import "module/hotel";
 @import "module/restaurant";
 @import "module/contacts";
+
+// ----------------------------------------------
+// Vendors
+
+@import "vendor/owl"

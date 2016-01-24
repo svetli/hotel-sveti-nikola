@@ -1,6 +1,15 @@
 // ----------------------------------------------
 // Global
 
+@font-face {
+  font-family: "icon-font";
+  src: font-url("icon-font.eot?#iefix") format("embedded-opentype"), font-url("icon-font.woff") format("woff"), font-url("icon-font.svg") format("svg"), font-url("icon-font.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
 }
@@ -15,8 +24,75 @@ ul, ol {
     list-style: none;
 }
 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  @include transition(all .2s ease-in-out);
+}
+
+[data-icon]:before {
+
+
+}
+
+[data-icon]:before {
+    font-family: $f-stack-icon !important;
+    content:attr(data-icon);
+    font-style:normal !important;
+    font-weight:normal !important;
+    font-variant:normal !important;
+    text-transform:none !important;
+    speak:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+.icon-facebook:before {
+    content:"a";
+}
+
 .container {
     margin: 0 auto;
     max-width: $max-container-width;
     padding: 0 6%;
+}
+
+.section-title {
+    width: 100%;
+    color: $c-brown;
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &:after {
+      content: "";
+      background: $c-brown;
+      width: 150px;
+      height: 2px;
+      margin-left: -75px;
+      @include position(absolute, null null -10px 50%);
+    }
+}
+
+.row {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  .col-1 {
+      width: 100%;
+  }
+  .col-2 {
+      width: 45%;
+  }
+}
+
+.centered {
+    text-align: center;
 }

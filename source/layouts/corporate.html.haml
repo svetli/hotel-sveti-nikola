@@ -5,7 +5,7 @@
   = javascript_include_tag "site"
 
 = wrap_layout :layout do
-  %meta{itemprop: 'name',        content: 'Hotel Sveti Nikola'                                                        }
+  %meta{itemprop: 'name',        content: 'Hotel Sveti Nikola'                                              }
   %meta{itemprop: 'description', content: (yield_content(:description) || current_page.data.description)    }
   %meta{itemprop: 'url',         content: 'http://hotel-sveti-nikola.com'                                   }
   %meta{itemprop: 'inLanguage',  content: I18n.locale                                                       }

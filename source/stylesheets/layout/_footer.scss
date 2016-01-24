@@ -1,0 +1,25 @@
+// ----------------------------------------------
+// Footer
+
+footer#footer {
+    background-color: $c-yellow;
+    .container {
+        .social-networks {
+            li {
+                float: left;
+                a {
+                    &:before {
+                        line-height: 20px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            float: right;
+            font-size: 10px;
+            padding: 10px 40px;
+        }
+    }
+}
