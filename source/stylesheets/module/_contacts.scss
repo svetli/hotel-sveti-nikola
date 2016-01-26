@@ -1,4 +1,39 @@
 section#contacts {
+    
+    a.write-us {
+        color: $c-brown;
+        font-size: 15px;
+        padding: 11px 21px;
+        position: relative;
+        text-transform: uppercase;
+        overflow: hidden;
+        display: inline-block;
+        border: 2px solid $c-grey;
+
+        span {
+            z-index: 1;
+            position: relative;
+        }
+
+        &:after {
+            content: "";
+            background: $c-yellow;
+            will-change: transform;
+            @include position(absolute, 0);
+            @include transform(translateY(-100%))
+        }
+
+        &, &:after {
+            @include transition(all .2s ease-in-out);
+        }
+
+        &:hover {
+            &:after {
+                @include transform(none);
+            }
+        }
+    }
+
     #map {
         width: 100%;
         min-height: 300px;

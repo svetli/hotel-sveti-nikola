@@ -11,6 +11,8 @@
         %p= I18n.t("corporate.contacts.phones.mobile")
       .col-3.col
         %h4= I18n.t("corporate.contacts.email.title")
-        %p= I18n.t("corporate.contacts.email.address")
+        %p
+          %a{href: I18n.t("corporate.contacts.email.address"), class: "write-us"}
+            %span= I18n.t("corporate.contacts.email.button")
     .row
       #map

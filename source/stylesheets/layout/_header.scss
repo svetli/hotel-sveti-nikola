@@ -5,6 +5,14 @@
     height: 125px;
     z-index: 10;
     @include position(fixed, 0 0 null 0);
+    @include transform(none);
+    @include transition(transform .5s $ease-out-expo);
+
+    .scrolled & {
+        @include transition(transform .5s $ease-out-expo);
+        @include transform(translateY(-40%));
+    }
+
 
     &:before {
         content: "";
@@ -32,10 +40,17 @@
                 background: url(../images/svetinikola.svg) no-repeat;
                 width: 220px;
                 height: 35px;
+                opacity: 1;
+
+                .scrolled & {
+                    top: 10%;
+                    @include transition(all .1s $ease-out-expo);
+                }
             }
 
             .scrolled & {
-                @include transform(translateY(20px) scale(.8));
+                @include transform(translateY(40px) scale(.8));
+
             }
         }
 
@@ -89,6 +104,52 @@
                         @include position(absolute, 50% -1px null null);
                     }
                 }
+            }
+        }
+    }
+}
+
+@include bp(max-width, $bp-large) {
+    [role=banner] {
+        .logo:after {
+            display: none;
+        }
+    }
+}
+
+@include bp(max-width, $bp-medium) {
+    [role=banner] {
+        @include transform(translateY(-40%));
+        .container {
+            padding-left: 3%;
+            padding-right: 3%;
+            .logo {
+                top: 10%;
+                @include transform(translateY(40px) scale(.8));
+            }
+
+            [role=navigation] {
+                li {
+                    &:not(:first-child) {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .languages {
+                li {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@include bp(max-width, $bp-small) {
+    [role=banner] {
+        .container {
+            [role=navigation] {
+                display: none;
             }
         }
     }

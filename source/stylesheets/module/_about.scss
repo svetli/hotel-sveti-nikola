@@ -8,3 +8,9 @@ section#about {
         color: $c-brown;
     }
 }
+
+@include bp(max-width, $bp-medium) {
+    section#about {
+        padding-top: 50px;
+    }
+}

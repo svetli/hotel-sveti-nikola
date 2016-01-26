@@ -38,3 +38,27 @@
         }
     }
 }
+
+@include bp(max-width, $bp-large) {
+    section#intro {
+        .container {
+            h2 {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+@include bp(max-width, $bp-medium) {
+    section#intro {
+        .container {
+            display: none;
+        }
+    }
+}
+
+@include bp(max-width, $bp-medium) {
+    section#intro {
+        display: none;
+    }
+}
